@@ -45,4 +45,8 @@ public class BasePageObject {
         find(locator).sendKeys(text);
     }
 
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
 }
