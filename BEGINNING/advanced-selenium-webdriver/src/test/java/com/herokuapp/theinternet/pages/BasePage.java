@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 import java.util.logging.Logger;
 
 public class BasePage {
@@ -23,6 +25,9 @@ public class BasePage {
 
     protected WebElement find(By locator) {
         return driver.findElement(locator);
+    }
+    protected List<WebElement> findAll(By locator) {
+        return driver.findElements(locator);
     }
 
     protected void waitFor(ExpectedCondition<WebElement> condition, Integer timeOutInSeconds) {
