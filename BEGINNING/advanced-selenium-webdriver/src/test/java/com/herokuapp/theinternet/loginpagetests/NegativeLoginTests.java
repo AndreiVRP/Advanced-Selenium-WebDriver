@@ -29,8 +29,7 @@ public class NegativeLoginTests extends TestUtilities {
 		String actualErrorMessage = loginPage.getErrorMessageText();
 
 		Assert.assertTrue(actualErrorMessage.contains(expectedErrorMessage),
-				"actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "
-						+ expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);
+				"actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: " + expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);
 	}
 
 }
