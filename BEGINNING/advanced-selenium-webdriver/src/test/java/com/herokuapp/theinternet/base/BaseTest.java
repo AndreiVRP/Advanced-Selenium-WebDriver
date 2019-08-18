@@ -1,14 +1,11 @@
 package com.herokuapp.theinternet.base;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
 import java.util.logging.Logger;
 
 public class BaseTest {
@@ -20,6 +17,7 @@ public class BaseTest {
     public void setUp(@Optional("chrome") String browser, ITestContext ctx) {
         String testName = ctx.getCurrentXmlTest().getName();
         log = Logger.getLogger(testName);
+
 
         BrowserDriverFactory factory = new BrowserDriverFactory(browser,log);
         driver = factory.createDriver();

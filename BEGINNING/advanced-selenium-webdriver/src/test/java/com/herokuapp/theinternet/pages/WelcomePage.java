@@ -1,14 +1,15 @@
 package com.herokuapp.theinternet.pages;
 
-import org.apache.logging.log4j.Logger;
+import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WelcomePageObject extends BasePageObject {
+public class WelcomePage extends BasePage {
 
     private String pageURL = "http://the-internet.herokuapp.com/";
-    private By formAuthenticatorLinkLocator = By.linkText("Form Authenticaton");
-    public WelcomePageObject(WebDriver driver, Logger log) {
+    private By formAuthenticatorLinkLocator = By.linkText("Form Authentication");
+
+    public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
     }
 
