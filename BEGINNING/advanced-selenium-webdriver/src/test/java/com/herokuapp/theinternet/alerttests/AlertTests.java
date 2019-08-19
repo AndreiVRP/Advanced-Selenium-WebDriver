@@ -94,7 +94,7 @@ public class AlertTests extends TestUtilities {
         String alertMessage = javaScriptAlertPage.getAlertText();
 
         // Type text into alert
-        javaScriptAlertPage.typeTextIntoAlert("Hello Alert, it's Dmitry here");
+        javaScriptAlertPage.typeTextIntoAlert("Hello Alert, it's Andrei here");
         sleep(1000);
         // Get Results text
         String result = javaScriptAlertPage.getResultText();
@@ -105,7 +105,7 @@ public class AlertTests extends TestUtilities {
                 "Alert message is not expected. \nShould be 'I am a JS prompt', but it is '" + alertMessage + "'");
 
         // 2 - Result text is expected
-        Assert.assertTrue(result.equals("You entered: Hello Alert, it's Dmitry here"),
+        Assert.assertTrue(result.equals("You entered: Hello Alert, it's Andrei here"),
                 "result is not expected. \nShould be 'You entered: Hello Alert, its Dmitry here', but it is '" + result
                         + "'");
     }
