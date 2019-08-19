@@ -1,11 +1,12 @@
 package com.herokuapp.theinternet.windowstests;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.NewWindowPage;
 import com.herokuapp.theinternet.pages.WelcomePage;
 import com.herokuapp.theinternet.pages.WindowsPage;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class WindowsTests extends TestUtilities {
 
