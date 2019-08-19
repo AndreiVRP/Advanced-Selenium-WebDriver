@@ -89,4 +89,8 @@ public class BasePage {
         }
     }
 
+    protected void switchToFrame(By frameLocator) {
+        driver.switchTo().frame(find(frameLocator));
+    }
+
 }
