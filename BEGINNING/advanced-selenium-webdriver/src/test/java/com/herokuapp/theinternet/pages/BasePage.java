@@ -1,5 +1,6 @@
 package com.herokuapp.theinternet.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,6 +53,12 @@ public class BasePage {
 
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
+    }
+
+    protected Alert switchToAlert() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.alertIsPresent());
+        return driver.switchTo().alert();
     }
 
 }
